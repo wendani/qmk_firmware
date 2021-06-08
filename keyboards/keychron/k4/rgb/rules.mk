@@ -39,3 +39,5 @@ OPT_DEFS = -O2
 # Custom RGB matrix handling
 RGB_MATRIX_ENABLE = yes
 RGB_MATRIX_DRIVER = SN32F248B
+
+OPENRGB_ENABLE = yes
