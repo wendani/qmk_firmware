@@ -52,6 +52,9 @@ LED_MATRIX_ENABLE = no
 LED_MATRIX_DRIVER = custom
 RGB_MATRIX_ENABLE = yes
 RGB_MATRIX_DRIVER = custom
+RAW_ENABLE = yes
+
+OPENRGB_ENABLE = yes
 
 # some options to reduce ram usage
 LDFLAGS += --specs=nano.specs
@@ -63,3 +66,9 @@ USE_EXCEPTIONS_STACKSIZE = 0xD0
 USE_PROCESS_STACKSIZE = 0x1E0
 
 DEFAULT_FOLDER = gmmk/full/rev3
+
+# process stack size of 0x1c0 crashes during SEND_STRING
+USE_EXCEPTIONS_STACKSIZE = 0xc0
+# 0x180 140 f0 d0    80gg a0gg b0gg b8gg c0 ok
+USE_PROCESS_STACKSIZE = 0x1F0
+# 0x210
