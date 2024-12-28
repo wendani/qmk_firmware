@@ -7,7 +7,7 @@
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_MAIN] = LAYOUT_ortho_2x4(
-     G(KC_D), KC_UP,   C(KC_C), C(KC_V),
+     G(KC_F), KC_UP,   G(KC_C), G(KC_V),
      KC_LEFT, KC_DOWN, KC_RGHT, MO(_FN)
   ),
 
