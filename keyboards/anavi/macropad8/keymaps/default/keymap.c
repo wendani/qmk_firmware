@@ -55,7 +55,7 @@ bool oled_task_user(void) {
   oled_write_P(PSTR("Scroll Lock: "), false);
   oled_write_ln_P(led_state.scroll_lock ? PSTR("On") : PSTR("Off"), false);
 #endif
-  oled_write_P(PSTR("Backlit: "), false);
+  oled_write_P(PSTR("Backlight: "), false);
   oled_write_ln_P(is_backlight_enabled() ? PSTR("On") : PSTR("Off"), false);
 #ifdef RGBLIGHT_ENABLE
   static char rgbStatusLine1[26] = {0};
