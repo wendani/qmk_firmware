@@ -42,7 +42,7 @@ bool oled_task_user(void) {
 
   // Host Keyboard LED Status
   led_t led_state = host_keyboard_led_state();
-  oled_write_P(PSTR("We love you through and through"), false);
+  oled_write_P(PSTR("We love you"), false);
   oled_write_ln_P(led_state.num_lock ? PSTR("On") : PSTR("Off"), false);
   oled_write_P(PSTR("Caps Lock: "), false);
   oled_write_ln_P(led_state.caps_lock ? PSTR("On") : PSTR("Off"), false);
