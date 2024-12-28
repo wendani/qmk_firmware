@@ -4,11 +4,12 @@
 #define _FN 1
 
 #define KC_X0 LT(_FN, KC_ESC)
+#define LCG(kc) (QK_LSFT | QK_LGUI | (kc))
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_MAIN] = LAYOUT_ortho_2x4(
-     G(KC_F), KC_UP,   G(KC_C), G(KC_V),
-     KC_LEFT, KC_DOWN, KC_RGHT, MO(_FN)
+     G(KC_F), G(KC_G), G(KC_C), G(KC_V),
+     LSG(KC_A), G(KC_X), LCG(KC_Q), MO(_FN)
   ),
 
   [_FN] = LAYOUT_ortho_2x4(
