@@ -4,7 +4,7 @@
 #define _FN 1
 
 #define KC_X0 LT(_FN, KC_ESC)
-#define LCG(kc) (QK_LSFT | QK_LGUI | (kc))
+#define LCG(kc) (QK_LCTL | QK_LGUI | (kc))
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_MAIN] = LAYOUT_ortho_2x4(
