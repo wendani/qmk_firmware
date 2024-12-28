@@ -26,7 +26,8 @@ oled_rotation_t oled_init_user(oled_rotation_t rotation) {
 bool oled_task_user(void) {
   // Host Keyboard Layer Status
   oled_write_ln_P(PSTR("Joyce Ni micro pad"), false);
-  oled_write_P(PSTR("We love you"), false);
+  oled_write_P(PSTR("We love you through"), false);
+  oled_write_P(PSTR("and thru"), false);
   oled_write_P(PSTR("Active layer: "), false);
 
   switch (get_highest_layer(layer_state)) {
@@ -42,6 +43,7 @@ bool oled_task_user(void) {
   }
 
   // Host Keyboard LED Status
+#if 0
   led_t led_state = host_keyboard_led_state();
   oled_write_P(PSTR("Num Lock: "), false);
   oled_write_ln_P(led_state.num_lock ? PSTR("On") : PSTR("Off"), false);
@@ -49,6 +51,7 @@ bool oled_task_user(void) {
   oled_write_ln_P(led_state.caps_lock ? PSTR("On") : PSTR("Off"), false);
   oled_write_P(PSTR("Scroll Lock: "), false);
   oled_write_ln_P(led_state.scroll_lock ? PSTR("On") : PSTR("Off"), false);
+#endif
   oled_write_P(PSTR("Backlit: "), false);
   oled_write_ln_P(is_backlight_enabled() ? PSTR("On") : PSTR("Off"), false);
 #ifdef RGBLIGHT_ENABLE
