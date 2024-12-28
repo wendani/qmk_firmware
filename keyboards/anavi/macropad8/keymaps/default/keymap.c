@@ -12,8 +12,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
 
   [_FN] = LAYOUT_ortho_2x4(
-     UG_TOGG, UG_NEXT, RGB_M_R, RGB_M_SN,
-     BL_TOGG, BL_STEP, BL_BRTG, _______
+     UG_TOGG, UG_NEXT, RGB_M_TW, RGB_M_X,
+     G(KC_X), BL_STEP, BL_BRTG, _______
   )
 };
 
